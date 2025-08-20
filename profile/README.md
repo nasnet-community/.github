@@ -6,5 +6,5 @@ We have a selection of solutions which you can find here:
 
 ## [Click here for NeighborLink & CityLink](https://github.com/nasnet-community/solutions/tree/main/neighbor-link#readme)
 NeighborLink is a solution based on Starlink, a custom OpenWRT and Outline or a browser proxy.
-## [Click here for Mikrotik](https://github.com/nasnet-community/solutions/tree/main/mikrotik#readme)
-The Mikrotik solution is based on Starlink, Mikrotik RouterOS and OpenVPN.
+## [Click here for NasNet Connect (Mikrotik & OpenWRT)](https://github.com/nasnet-community/connect/tree/main)
+NasNet Connect is a feature-rich secure networking tool for Mikrotik that provides IP masking for Starlink, VPN and remote access support, automated router setup, split tunneling, safe anonymous internet use, and much more.
