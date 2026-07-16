@@ -17,6 +17,10 @@
   <a href="https://starlink4iran.com/"><img src="https://img.shields.io/badge/Website-starlink4iran.com-2ea44f?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"></a>
 </p>
 
+<p align="center">
+  <img src="starlink-vs-akhond.jpg" alt="Comic: the internet is switched off in Iran, but Starlink and NasNet Connect bring people back online" width="600">
+</p>
+
 **NasNet** builds tools for **safely using Starlink and similar satellite internet in repressive and censored environments**, such as Iran. When governments cut the cables, we look to the sky. 🚀
 
 In countries with heavy censorship and frequent internet shutdowns, satellite internet is a lifeline — but using one can put you at risk. That's where we come in. Our mission: get people onto the free and open internet **safely** — hiding the fact that a satellite connection is in use, protecting the identity and location of operators and users, and making it all simple enough that you don't need to be a network engineer to stay safe.
