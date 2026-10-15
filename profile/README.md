@@ -14,11 +14,11 @@
 </p>
 
 <p align="center">
-  <a href="https://starlink4iran.com/"><img src="https://img.shields.io/badge/Website-starlink4iran.com-2ea44f?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"></a>
+  <a href="https://www.joinnasnet.com/"><img src="https://img.shields.io/badge/Website-www.joinnasnet.com-2ea44f?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"></a>
 </p>
 
 <p align="center">
-  <img src="starlink-vs-akhond.jpg" alt="Comic: the internet is switched off in Iran, but Starlink and NasNet Connect bring people back online" width="600">
+  <img src="starlink-vs-akhond.jpg" alt="Comic: the internet is switched off in Iran, but Starlink and NasNet bring people back online" width="600">
 </p>
 
 **NasNet** builds tools for **safely using Starlink and similar satellite internet in repressive and censored environments**, such as Iran. When governments cut the cables, we look to the sky. 🚀
@@ -34,34 +34,39 @@ In countries with heavy censorship and frequent internet shutdowns, satellite in
 
 ## 📡 One dish, many people: sharing Starlink over VPN
 
-A Starlink dish is scarce and expensive in places like Iran — but a single dish can carry far more than one household. Our tools let a dish owner run a **VPN server on their own router**, so that trusted friends, family, and neighbors can tunnel through the satellite connection from wherever they are:
+A Starlink dish is scarce and expensive in places like Iran — but a single dish can carry far more than one household. Our tools let a dish owner run a **VPN server on their own router**, or hand out access from a server they control, so that trusted friends, family, and neighbors can tunnel through the satellite connection from wherever they are:
 
-- 🏠 **Next door** — neighbors join over dedicated guest WiFi networks, each with their own username and password
-- 🌆 **Across the city** — people still on the domestic network connect through an encrypted VPN tunnel (WireGuard, OpenVPN, or Outline keys) and come out on the free internet via your dish, even mid-shutdown
-- 🕶️ **Safely** — the tunnel is encrypted end-to-end, the Starlink's digital footprint stays masked, and the dish owner keeps full control over who connects and how much bandwidth they use
+- 🏠 **Next door** — neighbors join over the WiFi networks your router broadcasts, set up for you in a few clicks
+- 🌆 **Across the city** — people still on the domestic network connect through an encrypted VPN tunnel and come out on the free internet via your dish, even mid-shutdown
+- 🕶️ **Safely** — the tunnel is encrypted end-to-end, the Starlink's digital footprint stays masked, and you keep full control over who connects, for how long, and how much data they use
 
-Every project below is built around this idea: **NasNet Connect** turns a MikroTik router into a multi-client VPN server for the people you trust; **NeighborLink** and **CityLink** scale the same model up to whole neighborhoods and cities.
+Every project below is built around this idea: **Nasnet Panel** turns a MikroTik router into a masked, VPN-sharing Starlink gateway, and **Nasnet Panel Linux** lets you hand out time- and traffic-limited access from your own server to the people you trust.
 
 ## 🚀 Our projects
 
-### [NasNet Connect](https://github.com/nasnet-community/connect/tree/main)
-The flagship. A free, open-source MikroTik router config generator built specifically for using Starlink safely in Iran. Answer a few questions, get a ready-to-apply configuration that protects your privacy and keeps your satellite connection hidden — no networking expertise required. Packed with features:
+### [Nasnet Panel](https://github.com/nasnet-community/nasnet-panel)
+The flagship. A free, open-source web panel for MikroTik routers, built so you can set up and run a safe Starlink connection without living in Winbox or the RouterOS terminal. It ships as one small container that can run right on the router it manages. Packed with features:
 
-- 🕶️ **IP masking for Starlink** — hides the digital footprint of your satellite connection when accessing domestic sites and apps
-- 🔀 **Split tunneling** — intelligently routes domestic and foreign traffic separately
-- 🔐 **Built-in VPN server for sharing your connection** — runs WireGuard and OpenVPN servers with multi-client support, so friends and family beyond your WiFi can tunnel into your router and get online through your Starlink
-- ⚙️ **Automated router setup** — no manual MikroTik configuration needed
-- 🎮 **Game-specific port forwarding** with an integrated game database
-- 📊 **Network monitoring** with performance visualization
-- 🧰 **SSL/TLS certificate management**, **DDNS support**, **NTP synchronization**, and **scheduled automatic updates**
-- 🌍 **Multi-language interface** — English and Farsi
+- 🧭 **Easy Config wizard** — sets up your uplinks, a VPN client that masks the Starlink IP, WiFi, and an OpenVPN server for sharing, in a few guided steps
+- 🔐 **VPN control center** — WireGuard, OpenVPN, IPsec, L2TP, PPTP, and SSTP tunnels, with peer and client monitoring
+- 📊 **Real-time dashboard** — live CPU, memory, traffic, and interface status at a glance
+- 🧱 **Firewall configuration** — filter, NAT, and mangle rules in a visual editor, with live connection tracking
+- 📶 **Wireless management** — WiFi interfaces, security profiles, and connected clients
+- 🔎 **Router discovery** — scans your network to find MikroTik devices automatically
+- ↩️ **Batch operations** — bulk changes with dry-run mode and automatic rollback on failure
+- 🧩 **Plugin marketplace** — one-click add-ons such as an MTProto proxy, an Xray server, and a Starlink dish monitor
+- 📦 **Runs anywhere** — on the router itself or any Docker host, on amd64, arm64, and arm/v7
 
-### [NeighborLink & CityLink](https://github.com/nasnet-community/solutions/tree/main/neighbor-link#readme)
-One dish, a whole neighborhood online. A custom OpenWRT firmware image that turns an affordable TP-Link router into a Starlink-sharing hub:
+### [Nasnet Panel Linux](https://github.com/nasnet-community/nasnet-panel-linux)
+Your own VPN service, on your own server. A free, open-source, self-hosted panel that runs Xray on a single Linux server, so you can share access with the people who need it without hand-editing a single config file:
 
-- 📶 **NeighborLink** broadcasts password-protected guest WiFi networks for the people around you, with per-neighbor usernames and passwords so the dish owner stays in control
-- 🔑 **Remote sharing via VPN** — a WireGuard tunnel masks the Starlink's IP, and shareable Outline keys let people connect from beyond WiFi range
-- 🌆 **CityLink** extends the reach city-wide: a domestic VPS relays VPN traffic to the dish, so anyone in the city can reach the free internet through it — no line of sight to your rooftop required
+- 🔌 **Modern protocols** — VLESS, VMess, Trojan, and Shadowsocks over TLS, REALITY, or XTLS, plus WireGuard
+- 🔗 **One link for every app** — universal subscription links that detect the client (v2rayNG, v2rayN, Clash, sing-box, Shadowrocket) and serve the right config
+- ⏱️ **Time- and traffic-limited accounts** — give each person their own subscription, with an expiry date and a data cap
+- 📲 **Self-serve for users** — a personal page with live usage, QR codes, and one-tap import, plus an optional Telegram bot
+- 🚨 **Metrics, alerts, and an audit log** — know when something goes wrong, with notifications to Telegram, Discord, or a webhook
+- 🛠️ **Easy to install** — a one-line interactive installer, with Docker or systemd, automatic TLS, and backup and restore
+- 🌍 **Multi-language** — English and Farsi
 
 ### More coming soon… 👀
 We're cooking up new tools and solutions. Follow us on our socials above to be the first to know — you won't want to miss what's next.
